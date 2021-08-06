@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="RemoteRepositoriesConfiguration">
+    <remote-repository>
+      <option name="id" value="central" />
+      <option name="name" value="Central Repository" />
+      <option name="url" value="https://repo.maven.apache.org/maven2" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="Backbase Artifact Repository" />
+      <option name="name" value="Backbase Artifact Repository" />
+      <option name="url" value="https://artifacts.backbase.com/repo/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="central" />
+      <option name="name" value="Maven Central repository" />
+      <option name="url" value="https://repo1.maven.org/maven2" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="Backbase Artifact Repository" />
+      <option name="name" value="Backbase Artifact Repository" />
+      <option name="url" value="https://repo.backbase.com/repo/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="central" />
+      <option name="name" value="Central Repository" />
+      <option name="url" value="https://artifacts.backbase.com/repo" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="backbase.specs.repository" />
+      <option name="name" value="backbase.specs.repository" />
+      <option name="url" value="https://artifacts.backbase.com/specs/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="dockerrepo.backbase.com" />
+      <option name="name" value="dockerrepo.backbase.com" />
+      <option name="url" value="repo.backbase.com/backbase-docker-releases/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="repo.backbase.com" />
+      <option name="name" value="repo.backbase.com" />
+      <option name="url" value="https://repo.backbase.com/repo" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="Backbase Artifact Releases Repository" />
+      <option name="name" value="artifacts.backbase.com-releases" />
+      <option name="url" value="https://artifacts.backbase.com/backbase-development-internal-releases" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="backbase.specs.repository.payment" />
+      <option name="name" value="backbase.specs.repository.payment" />
+      <option name="url" value="https://artifacts.backbase.com/specs/payment" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="Backbase Artifactory Repository" />
+      <option name="name" value="Backbase Artifactory Repository" />
+      <option name="url" value="https://artifacts.backbase.com/repo" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="jboss.community" />
+      <option name="name" value="JBoss Community repository" />
+      <option name="url" value="https://repository.jboss.org/nexus/content/repositories/public/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="backbase.specs.repository.1" />
+      <option name="name" value="backbase.specs.repository.1" />
+      <option name="url" value="https://artifacts.backbase.com/specs" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="Backbase Artifact Snapshots Repository" />
+      <option name="name" value="artifacts.backbase.com-snapshots" />
+      <option name="url" value="https://artifacts.backbase.com/backbase-development-snapshots" />
+    </remote-repository>
+  </component>
+</project>
