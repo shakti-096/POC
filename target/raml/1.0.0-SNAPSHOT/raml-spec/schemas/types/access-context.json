@@ -1,0 +1,30 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "javaType": "com.backbase.presentation.contact.rest.spec.v2.contacts.ExternalAccessContext",
+  "description": "Access context",
+  "properties": {
+    "externalLegalEntityId": {
+      "$ref": "definitions.json#/accessgroup-definitions/externalId",
+      "description": "External id of Legal Entity"
+    },
+    "externalServiceAgreementId": {
+      "$ref": "definitions.json#/accessgroup-definitions/externalId",
+      "description": "External ID of Service Agreement"
+    },
+    "externalUserId": {
+      "$ref": "definitions.json#/accessgroup-definitions/externalId",
+      "description": "External id of User"
+    },
+    "scope": {
+      "type": "string",
+      "enum": ["SA", "LE", "USER"],
+      "description": "The context in which this is stored, either Service Agreement (SA), Legal Entity (LE) or User (USER)",
+      "default": "USER"
+    }
+  },
+  "required": [
+    "externalUserId",
+    "scope"
+  ]
+}

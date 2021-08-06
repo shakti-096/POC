@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "branchName": {
+      "description": "Name of the branch",
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 50
+    },
+    "branchCode": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "branchName",
+    "branchCode"
+  ]
+}

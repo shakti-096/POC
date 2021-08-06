@@ -1,0 +1,135 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "fullNameEN": {
+      "type": "string"
+    },
+    "fullNameAR": {
+      "type": "string"
+    },
+    "placeOfBirth": {
+      "type": "string"
+    },
+    "dateOfBirth": {
+      "type": "string"
+    },
+    "nationality": {
+      "type": "string"
+    },
+    "nationalID": {
+      "type": "string"
+    },
+    "listOfIDs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "listOfIssueDates": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "listOfExpiryDates": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "listOfOtherNationality": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "numberOfPassport": {
+      "type": "string"
+    },
+    "countryOfResidence": {
+      "type": "string"
+    },
+    "listOfAddresses": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "townEn": {
+          "type": "string"
+        },
+        "townAR": {
+          "type": "string"
+        },
+        "district": {
+          "type": "string"
+        },
+        "streetNameEN": {
+          "type": "string"
+        },
+        "streetNameAR": {
+          "type": "string"
+        }
+      }
+    },
+    "listOfMobileNumbers": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "listOfCustomerOccupations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "listOfEmployersNames": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "employersCountry": {
+      "type": "string"
+    },
+    "employersCity": {
+      "type": "string"
+    },
+    "employersStreetName": {
+      "type": "string"
+    },
+    "annualSalary": {
+      "type": "string"
+    },
+    "otherSourceOfIncome": {
+      "type": "string"
+    },
+    "politicallyExposedPerson": {
+      "type": "string"
+    },
+    "beneficiaryOfAccount": {
+      "type": "string"
+    },
+    "beneficiaryName": {
+      "type": "string"
+    },
+    "kycFlag": {
+      "type": "string"
+    },
+    "riskFlag": {
+      "type": "string"
+    },
+    "jointFlag": {
+      "type": "string"
+    },
+    "minorFlag": {
+      "type": "string"
+    },
+    "updateFlag": {
+      "type": "string"
+    }
+  }
+}

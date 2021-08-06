@@ -1,0 +1,81 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "array",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "address": {
+      "type": "object",
+      "properties": {
+        "addressLine1": {
+          "type": "string",
+          "min": 1,
+          "max": 500
+        },
+        "addressLine2": {
+          "type": "string",
+          "min": 1,
+          "max": 500
+        },
+        "addressLine3": {
+          "type": "string",
+          "min": 1,
+          "max": 500
+        },
+        "postalCode": {
+          "type": "string",
+          "min": 1,
+          "max": 20
+        },
+        "country": {
+          "type": "string",
+          "min": 1,
+          "max": 200
+        }
+      }
+    },
+    "hours": {
+      "type": "array",
+      "items": {
+        "properties": {
+          "day": {
+            "type": "integer",
+            "min": 1,
+            "max": 7
+          },
+          "open": {
+            "type": "string"
+          },
+          "close": {
+            "type": "string"
+          },
+          "postalCode": {
+            "type": "string"
+          },
+          "country": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "latitude": {
+      "type": "number"
+    },
+    "longitude": {
+      "type": "number"
+    },
+    "placeType": {
+      "type": "string"
+    },
+    "services": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

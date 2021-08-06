@@ -3,44 +3,18 @@ info:
   title: Wallet Test Client API
   description: "No description available\n# Disclaimer\n                         \
     \       This API is converted from RAML1.0 using the boat-maven-plugin.\n# Changelog\n\
-    ## 1.0.0-SNAPSHOT - 1.0.0-SNAPSHOT\n**Note:** API has incompatible changes!!\n\
-    #### What's New\n---\n\n##### `GET` /integration-api/v1/items\n\n> Retrieve list\
-    \ of all items.\n\n#### What's Deleted\n---\n\n##### `GET` /service-api/v1/wallet/admin/{userId}/paymentcards\n\
+    ## 1.0.0-SNAPSHOT - 1.1.0-SNAPSHOT\n**Note:** API has incompatible changes!!\n\
+    #### What's New\n---\n\n##### `GET` /service-api/v1/wallet/admin/{userId}/paymentcards\n\
     \n> Returns available payment card details for user, optionally filtered by nameOnCard.\n\
     \n##### `POST` /service-api/v1/wallet/admin/{userId}/paymentcards\n\n> Adds a\
     \ payment card to the user's wallet.\n\n##### `GET` /service-api/v1/wallet/admin/{userId}/paymentcards/{cardId}\n\
     \n> Returns details of a specific payment card.\n\n##### `DELETE` /service-api/v1/wallet/admin/{userId}/paymentcards/{cardId}\n\
     \n> Deletes a payment card with a given id.\n\n##### `GET` /service-api/v1/testQuery/required-boolean-query-param\n\
-    \n\n## 1.0.0-SNAPSHOT - 1.0.0-SNAPSHOT\n**Note:** API has incompatible changes!!\n\
-    #### What's New\n---\n\n##### `GET` /client-api/v1/wallet/paymentcards\n\n> Returns\
-    \ available payment card details for user, optionally filtered by nameOnCard.\n\
-    \n##### `POST` /client-api/v1/wallet/paymentcards\n\n> Adds a payment card to\
-    \ the user's wallet.\n\n##### `GET` /client-api/v1/wallet/paymentcards/{cardId}\n\
-    \n> Returns details of a specific payment card.\n\n##### `DELETE` /client-api/v1/wallet/paymentcards/{cardId}\n\
-    \n> Deletes a payment card with a given id.\n\n##### `GET` /client-api/v1/bbt/build-info\n\
-    \n> Build Information.\n\n##### `PATCH` /client-api/v1/patch\n\n> patch\n\n#####\
-    \ `GET` /client-api/v1/test/required-boolean-query-param\n\n\n##### `GET` /client-api/v1/test/values\n\
-    \n\n##### `GET` /client-api/v1/test/headers\n\n\n##### `GET` /client-api/v1/test/date-query-params\n\
-    \n\n#### What's Deleted\n---\n\n##### `GET` /integration-api/v1/items\n\n> Retrieve\
-    \ list of all items.\n\n## 1.0.0-SNAPSHOT - 1.1.0-SNAPSHOT\n**Note:** API has\
-    \ incompatible changes!!\n#### What's New\n---\n\n##### `GET` /service-api/v1/wallet/admin/{userId}/paymentcards\n\
-    \n> Returns available payment card details for user, optionally filtered by nameOnCard.\n\
-    \n##### `POST` /service-api/v1/wallet/admin/{userId}/paymentcards\n\n> Adds a\
-    \ payment card to the user's wallet.\n\n##### `GET` /service-api/v1/wallet/admin/{userId}/paymentcards/{cardId}\n\
-    \n> Returns details of a specific payment card.\n\n##### `DELETE` /service-api/v1/wallet/admin/{userId}/paymentcards/{cardId}\n\
-    \n> Deletes a payment card with a given id.\n\n##### `GET` /service-api/v1/testQuery/required-boolean-query-param\n\
-    \n\n#### What's Deleted\n---\n\n##### `GET` /client-api/v1/wallet/paymentcards\n\
-    \n> Returns available payment card details for user, optionally filtered by nameOnCard.\n\
-    \n##### `POST` /client-api/v1/wallet/paymentcards\n\n> Adds a payment card to\
-    \ the user's wallet.\n\n##### `GET` /client-api/v1/wallet/paymentcards/{cardId}\n\
-    \n> Returns details of a specific payment card.\n\n##### `DELETE` /client-api/v1/wallet/paymentcards/{cardId}\n\
-    \n> Deletes a payment card with a given id.\n\n##### `GET` /client-api/v1/bbt/build-info\n\
-    \n> Build Information.\n\n##### `PATCH` /client-api/v1/patch\n\n> patch\n\n#####\
-    \ `GET` /client-api/v1/test/required-boolean-query-param\n\n\n##### `GET` /client-api/v1/test/values\n\
-    \n\n##### `GET` /client-api/v1/test/headers\n\n\n##### `GET` /client-api/v1/test/date-query-params\n\
-    \n\n## 1.1.0-SNAPSHOT - 1.1.0-SNAPSHOT\n**Note:** API has incompatible changes!!\n\
-    #### What's New\n---\n\n##### `GET` /integration-api/v1/items\n\n> Retrieve list\
-    \ of all items.\n\n#### What's Deleted\n---\n\n##### `GET` /service-api/v1/wallet/admin/{userId}/paymentcards\n\
+    \n\n#### What's Deleted\n---\n\n##### `GET` /client-api/v1/customer-kyc-info\n\
+    \n> Returns available items, optionally filtered by name.\n\n##### `PUT` /client-api/v1/customer-kyc-info\n\
+    \n> UpdateCustomerKycInfo.\n\n## 1.1.0-SNAPSHOT - 1.1.0-SNAPSHOT\n**Note:** API\
+    \ has incompatible changes!!\n#### What's New\n---\n\n##### `GET` /integration-api/v1/items\n\
+    \n> Retrieve list of all items.\n\n#### What's Deleted\n---\n\n##### `GET` /service-api/v1/wallet/admin/{userId}/paymentcards\n\
     \n> Returns available payment card details for user, optionally filtered by nameOnCard.\n\
     \n##### `POST` /service-api/v1/wallet/admin/{userId}/paymentcards\n\n> Adds a\
     \ payment card to the user's wallet.\n\n##### `GET` /service-api/v1/wallet/admin/{userId}/paymentcards/{cardId}\n\

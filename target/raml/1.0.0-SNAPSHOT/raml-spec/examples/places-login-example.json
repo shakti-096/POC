@@ -1,0 +1,117 @@
+[
+  {
+    "id": "00000000-0000-1000-a000-000000000001",
+    "name": "Main Branch",
+    "address": {
+      "addressLine1": "Issam Al-Ajlouni St., Shmaisani",
+      "addressLine2": "Amman",
+      "country": "Jordan"
+    },
+    "hours": [
+      {
+        "day": 1,
+        "open": "08:00",
+        "close": "15:30"
+      },
+      {
+        "day": 2,
+        "open": "08:00",
+        "close": "15:30"
+      },
+      {
+        "day": 3,
+        "open": "08:00",
+        "close": "15:30"
+      },
+      {
+        "day": 4,
+        "open": "08:00",
+        "close": "15:30"
+      },
+      {
+        "day": 7,
+        "open": "08:00",
+        "close": "15:30"
+      }
+    ],
+    "latitude": 31.969939,
+    "longitude": 35.902826,
+    "placeType": "branch",
+    "services": [
+      "Accounts Services",
+      "Financial Services",
+      "Loans Services",
+      "Cards Services",
+      "Electronic Services",
+      "Select Services",
+      "Corporate & SMEs Services"
+    ],
+    "additions": {
+      "branchCode": "JO0010002",
+      "distance": "382.08"
+    }
+  },
+  {
+    "id": "00000000-0000-1000-a000-000000000002",
+    "name": "Taj Mall Branch",
+    "address": {
+      "addressLine1": "Prince Hashim St., Abdoun",
+      "addressLine2": "Amman",
+      "country": "Jordan"
+    },
+    "hours": [
+      {
+        "day": 1,
+        "open": "10:00",
+        "close": "22:00"
+      },
+      {
+        "day": 2,
+        "open": "10:00",
+        "close": "22:00"
+      },
+      {
+        "day": 3,
+        "open": "10:00",
+        "close": "22:00"
+      },
+      {
+        "day": 4,
+        "open": "10:00",
+        "close": "22:00"
+      },
+      {
+        "day": 5,
+        "open": "10:00",
+        "close": "22:00"
+      },
+      {
+        "day": 6,
+        "open": "14:00",
+        "close": "22:00"
+      },
+      {
+        "day": 7,
+        "open": "10:00",
+        "close": "22:00"
+      }
+    ],
+    "latitude": 31.940965,
+    "longitude": 35.888043,
+    "placeType": "branch",
+    "services": [
+      "Accounts Services",
+      "Financial Services",
+      "Loans Services",
+      "Cards Services",
+      "Electronic Services",
+      "Safe Boxes",
+      "Select Services",
+      "Corporate & SMEs Services"
+    ],
+    "additions": {
+      "branchCode": "JO0010023",
+      "distance": "383.53"
+    }
+  }
+]

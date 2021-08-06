@@ -1,0 +1,725 @@
+openapi: 3.0.3
+info:
+  title: Customer KYC Information Specification
+  description: |-
+    No description available
+    # Disclaimer
+                                    This API is converted from RAML1.0 using the boat-maven-plugin.
+  version: 1.0.0-SNAPSHOT
+  x-logo:
+    altText: Backbase
+    url: http://www.backbase.com/wp-content/uploads/2017/04/backbase-logo-png.png
+servers:
+- url: /raml-service/
+  description: The server
+tags:
+- name: customer kyc information specification
+paths:
+  /client-api/v1/customer-kyc-info:
+    summary: CustomerKycInfo
+    description: No description available
+    get:
+      tags:
+      - customer-kyc-info
+      summary: "Returns available items, optionally filtered by name."
+      description: "Returns available items, optionally filtered by name"
+      operationId: getCustomerKycInfo
+      parameters:
+      - name: name
+        in: query
+        description: "Filter by item name (case-insensitive), can be the first one\
+          \ or more characters of one of the words/names"
+        required: false
+        schema:
+          type: string
+        examples:
+          example:
+            summary: example
+            value: Smi
+      - name: from
+        in: query
+        description: Page Number. Skip over pages of elements by specifying a start
+          value for the query
+        required: false
+        schema:
+          type: integer
+          format: int32
+          default: 0
+        examples:
+          example:
+            summary: example
+            value: 20
+      - name: cursor
+        in: query
+        description: |
+          Record UUID. As an alternative for specifying 'from' this allows to point to the record to start the selection from.
+        required: false
+        schema:
+          type: string
+          default: ""
+        examples:
+          example:
+            summary: example
+            value: 76d5be8b-e80d-4842-8ce6-ea67519e8f74
+      - name: size
+        in: query
+        description: "Limit the number of elements on the response. When used in combination\
+          \ with cursor, the value\nis allowed to be a negative number to indicate\
+          \ requesting records upwards from the starting point indicated\nby the cursor.\n"
+        required: false
+        schema:
+          type: integer
+          format: int32
+          default: 10
+        examples:
+          example:
+            summary: example
+            value: 80
+      - name: orderBy
+        in: query
+        description: "Order by field: name\n"
+        required: false
+        schema:
+          type: string
+        examples:
+          example:
+            summary: example
+      - name: direction
+        in: query
+        description: Direction
+        required: false
+        schema:
+          type: string
+          enum:
+          - ASC
+          - DESC
+          default: DESC
+        examples:
+          example:
+            summary: example
+      responses:
+        "200":
+          description: No description available
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CustomerKycInfoGetResponseBody'
+              examples:
+                example:
+                  value:
+                    title: MISS
+                    fullNameEN: CAROLEEN QOSTA MITRI BOSHEH
+                    fullNameAR: ??????? ???? ???? ????
+                    placeOfBirth: JO
+                    dateOfBirth: "19790822"
+                    nationality: JO
+                    nationalID: "9792002732"
+                    listOfIDs:
+                    - BCG80726
+                    - BCG80727
+                    listOfIssueDates:
+                    - "20161227"
+                    - "20161227"
+                    listOfExpiryDates:
+                    - "202612"
+                    listOfOtherNationality:
+                    - JO
+                    - ""
+                    numberOfPassport: BCG80727
+                    countryOfResidence: US
+                    listOfAddresses:
+                    - townEn: ""
+                      townAR: ???? ???????
+                      district: TEST
+                      streetNameEN: ""
+                      streetNameAR: ""
+                    - townEn: TEST
+                      townAR: ???? ???????
+                      district: ""
+                      streetNameEN: TEST . .... .......
+                      streetNameAR: ???? ???????
+                    listOfMobileNumbers:
+                    - "914444444"
+                    - "916666666"
+                    - +351 917777777
+                    listOfCustomerOccupations:
+                    - OCC1
+                    - OCC2
+                    - OCC3
+                    listOfEmployerNames:
+                    - TEST1
+                    - TEST2
+                    - TEST3
+                    employersCountry: JO
+                    employersCity: Lisbon
+                    annualSalary: ""
+                    otherSourceOfIncome: ""
+                    politicallyExposedPerson: ""
+                    stateOfPEP: ""
+                    beneficiaryOfAccount: ""
+                    beneficiaryName: ""
+                    kycFlag: "NO"
+                    riskFlag: "NO"
+                    jointFlag: "NO"
+                    minorFlag: "NO"
+                    updateFlag: "NO"
+        "400":
+          description: BadRequest
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BadRequestError'
+              examples:
+                example:
+                  value:
+                    message: Bad Request
+                    errors:
+                    - message: "Value Exceeded. Must be between {min} and {max}."
+                      key: common.api.shoesize
+                      context:
+                        max: "50"
+                        min: "1"
+        "500":
+          description: InternalServerError
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerError'
+              examples:
+                example:
+                  value:
+                    message: Description of error
+    put:
+      tags:
+      - customer-kyc-info
+      summary: UpdateCustomerKycInfo.
+      description: UpdateCustomerKycInfo
+      operationId: putCustomerKycInfo
+      requestBody:
+        description: UpdateCustomerKycInfo
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UpdateCustomerKycInfoRequestBody'
+      responses:
+        "201":
+          description: Updated customer KYC Information
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UpdateCustomerKycInfoResponseBody'
+        "400":
+          description: BadRequest
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BadRequestError'
+              examples:
+                example:
+                  value:
+                    message: Bad Request
+                    errors:
+                    - message: "Value Exceeded. Must be between {min} and {max}."
+                      key: common.api.shoesize
+                      context:
+                        max: "50"
+                        min: "1"
+        "500":
+          description: InternalServerError
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerError'
+              examples:
+                example:
+                  value:
+                    message: Description of error
+components:
+  schemas:
+    BadRequestError:
+      required:
+      - message
+      type: object
+      properties:
+        message:
+          type: string
+          description: Any further information
+        errors:
+          type: array
+          description: Detailed error information
+          items:
+            $ref: '#/components/schemas/ErrorItem'
+      x-java-type: com.backbase.buildingblocks.presentation.errors.BadRequestException
+    CustomerKycInfoGetResponseBody:
+      type: object
+      properties:
+        title:
+          type: string
+        fullNameEN:
+          type: string
+        fullNameAR:
+          type: string
+        placeOfBirth:
+          type: string
+        dateOfBirth:
+          type: string
+        nationality:
+          type: string
+        nationalID:
+          type: string
+        listOfIDs:
+          type: array
+          items:
+            type: string
+        listOfIssueDates:
+          type: array
+          items:
+            type: string
+        listOfExpiryDates:
+          type: array
+          items:
+            type: string
+        listOfOtherNationality:
+          type: array
+          items:
+            type: string
+        numberOfPassport:
+          type: string
+        countryOfResidence:
+          type: string
+        listOfAddresses:
+          type: array
+          items:
+            type: object
+        listOfMobileNumbers:
+          type: array
+          items:
+            type: string
+        listOfCustomerOccupations:
+          type: array
+          items:
+            type: string
+        listOfEmployersNames:
+          type: array
+          items:
+            type: string
+        employersCountry:
+          type: string
+        employersCity:
+          type: string
+        employersStreetName:
+          type: string
+        annualSalary:
+          type: string
+        otherSourceOfIncome:
+          type: string
+        politicallyExposedPerson:
+          type: string
+        beneficiaryOfAccount:
+          type: string
+        beneficiaryName:
+          type: string
+        kycFlag:
+          type: string
+        riskFlag:
+          type: string
+        jointFlag:
+          type: string
+        minorFlag:
+          type: string
+        updateFlag:
+          type: string
+      example:
+        title: MISS
+        fullNameEN: CAROLEEN QOSTA MITRI BOSHEH
+        fullNameAR: ??????? ???? ???? ????
+        placeOfBirth: JO
+        dateOfBirth: "19790822"
+        nationality: JO
+        nationalID: "9792002732"
+        listOfIDs:
+        - BCG80726
+        - BCG80727
+        listOfIssueDates:
+        - "20161227"
+        - "20161227"
+        listOfExpiryDates:
+        - "202612"
+        listOfOtherNationality:
+        - JO
+        - ""
+        numberOfPassport: BCG80727
+        countryOfResidence: US
+        listOfAddresses:
+        - townEn: ""
+          townAR: ???? ???????
+          district: TEST
+          streetNameEN: ""
+          streetNameAR: ""
+        - townEn: TEST
+          townAR: ???? ???????
+          district: ""
+          streetNameEN: TEST . .... .......
+          streetNameAR: ???? ???????
+        listOfMobileNumbers:
+        - "914444444"
+        - "916666666"
+        - +351 917777777
+        listOfCustomerOccupations:
+        - OCC1
+        - OCC2
+        - OCC3
+        listOfEmployerNames:
+        - TEST1
+        - TEST2
+        - TEST3
+        employersCountry: JO
+        employersCity: Lisbon
+        annualSalary: ""
+        otherSourceOfIncome: ""
+        politicallyExposedPerson: ""
+        stateOfPEP: ""
+        beneficiaryOfAccount: ""
+        beneficiaryName: ""
+        kycFlag: "NO"
+        riskFlag: "NO"
+        jointFlag: "NO"
+        minorFlag: "NO"
+        updateFlag: "NO"
+    ErrorItem:
+      type: object
+      properties:
+        message:
+          type: string
+          description: Default Message. Any further information.
+        key:
+          type: string
+          description: "{capability-name}.api.{api-key-name}. For generated validation\
+            \ errors this is the path in the document the error resolves to. e.g.\
+            \ object name + '.' + field"
+        context:
+          type: object
+          description: Context can be anything used to construct localised messages.
+          x-java-type: "java.util.Map<String,String>"
+      description: A validation error
+    ForbiddenError:
+      type: object
+      properties:
+        message:
+          type: string
+          description: Any further information
+        errors:
+          type: array
+          description: Detailed error information
+          items:
+            $ref: '#/components/schemas/ErrorItem'
+      x-java-type: com.backbase.buildingblocks.presentation.errors.ForbiddenException
+    GetCustomerInformationKYC:
+      type: object
+      properties:
+        title:
+          type: string
+        fullNameEN:
+          type: string
+        fullNameAR:
+          type: string
+        placeOfBirth:
+          type: string
+        dateOfBirth:
+          type: string
+        nationality:
+          type: string
+        nationalID:
+          type: string
+        listOfIDs:
+          type: array
+          items:
+            type: string
+        listOfIssueDates:
+          type: array
+          items:
+            type: string
+        listOfExpiryDates:
+          type: array
+          items:
+            type: string
+        listOfOtherNationality:
+          type: array
+          items:
+            type: string
+        numberOfPassport:
+          type: string
+        countryOfResidence:
+          type: string
+        listOfAddresses:
+          type: array
+          items:
+            type: object
+        listOfMobileNumbers:
+          type: array
+          items:
+            type: string
+        listOfCustomerOccupations:
+          type: array
+          items:
+            type: string
+        listOfEmployersNames:
+          type: array
+          items:
+            type: string
+        employersCountry:
+          type: string
+        employersCity:
+          type: string
+        employersStreetName:
+          type: string
+        annualSalary:
+          type: string
+        otherSourceOfIncome:
+          type: string
+        politicallyExposedPerson:
+          type: string
+        beneficiaryOfAccount:
+          type: string
+        beneficiaryName:
+          type: string
+        kycFlag:
+          type: string
+        riskFlag:
+          type: string
+        jointFlag:
+          type: string
+        minorFlag:
+          type: string
+        updateFlag:
+          type: string
+      example:
+        title: MISS
+        fullNameEN: CAROLEEN QOSTA MITRI BOSHEH
+        fullNameAR: ??????? ???? ???? ????
+        placeOfBirth: JO
+        dateOfBirth: "19790822"
+        nationality: JO
+        nationalID: "9792002732"
+        listOfIDs:
+        - BCG80726
+        - BCG80727
+        listOfIssueDates:
+        - "20161227"
+        - "20161227"
+        listOfExpiryDates:
+        - "202612"
+        listOfOtherNationality:
+        - JO
+        - ""
+        numberOfPassport: BCG80727
+        countryOfResidence: US
+        listOfAddresses:
+        - townEn: ""
+          townAR: ???? ???????
+          district: TEST
+          streetNameEN: ""
+          streetNameAR: ""
+        - townEn: TEST
+          townAR: ???? ???????
+          district: ""
+          streetNameEN: TEST . .... .......
+          streetNameAR: ???? ???????
+        listOfMobileNumbers:
+        - "914444444"
+        - "916666666"
+        - +351 917777777
+        listOfCustomerOccupations:
+        - OCC1
+        - OCC2
+        - OCC3
+        listOfEmployerNames:
+        - TEST1
+        - TEST2
+        - TEST3
+        employersCountry: JO
+        employersCity: Lisbon
+        annualSalary: ""
+        otherSourceOfIncome: ""
+        politicallyExposedPerson: ""
+        stateOfPEP: ""
+        beneficiaryOfAccount: ""
+        beneficiaryName: ""
+        kycFlag: "NO"
+        riskFlag: "NO"
+        jointFlag: "NO"
+        minorFlag: "NO"
+        updateFlag: "NO"
+    InternalServerError:
+      required:
+      - message
+      type: object
+      properties:
+        message:
+          type: string
+          description: Further Information
+      description: Represents HTTP 500 Internal Server Error
+      x-java-type: com.backbase.buildingblocks.presentation.errors.InternalServerErrorException
+    NotAcceptableError:
+      type: object
+      properties:
+        message:
+          type: string
+        supportedMediaTypes:
+          type: array
+          description: List of supported media types for this endpoint
+          items:
+            type: string
+      x-java-type: com.backbase.buildingblocks.presentation.errors.NotAcceptableException
+    NotFoundError:
+      type: object
+      properties:
+        message:
+          type: string
+          description: Any further information
+        errors:
+          type: array
+          description: Detailed error information
+          items:
+            $ref: '#/components/schemas/ErrorItem'
+      x-java-type: com.backbase.buildingblocks.presentation.errors.NotFoundException
+    UnauthorizedAltError:
+      type: object
+      properties:
+        message:
+          type: string
+          description: Any further information
+        errors:
+          type: array
+          description: Detailed error information
+          items:
+            $ref: '#/components/schemas/ErrorItem'
+      x-java-type: com.backbase.buildingblocks.presentation.errors.UnauthorizedException
+    UnauthorizedError:
+      required:
+      - message
+      type: object
+      properties:
+        message:
+          type: string
+    UnsupportedMediaTypeError:
+      type: object
+      properties:
+        message:
+          type: string
+          description: Any further information
+        errors:
+          type: array
+          description: Detailed error information
+          items:
+            $ref: '#/components/schemas/ErrorItem'
+      x-java-type: com.backbase.buildingblocks.presentation.errors.UnsupportedMediaTypeException
+    UpdateCustomerKycInfoRequestBody:
+      type: object
+      properties:
+        legalID1:
+          type: string
+        legalIssueDate1:
+          type: string
+        legalExpiryDate1:
+          type: string
+        legalID2:
+          type: string
+        legalIssueDate2:
+          type: string
+        legalExpiryDate2:
+          type: string
+        residence:
+          type: string
+        townCountry1:
+          type: string
+        townCountry2:
+          type: string
+        streetName1:
+          type: string
+        streetName2:
+          type: string
+        phoneNumber1:
+          type: string
+        phoneNumber2:
+          type: string
+        phoneNumber3:
+          type: string
+        occupation1:
+          type: string
+        occupation2:
+          type: string
+        occupation3:
+          type: string
+        employersName1:
+          type: string
+        employersName2:
+          type: string
+        employersName3:
+          type: string
+        otherNationality1:
+          type: string
+        otherNationality2:
+          type: string
+        workingCountry:
+          type: string
+        residentStatus:
+          type: string
+        politicallyExposedPerson:
+          type: string
+          enum:
+          - "Y"
+          - "N"
+        workingCity:
+          type: string
+        workingStreetName:
+          type: string
+        annualSalary:
+          type: string
+        otherSourceOfIncome:
+          type: string
+        accountBeneficiary:
+          type: string
+        beneficiaryName:
+          type: string
+      example:
+        legalID1: BCG80726
+        legalIssueDate1: "20161227"
+        legalExpiryDate1: "20261226"
+        legalID2: BCG80727
+        legalIssueDate2: "20161227"
+        legalExpiryDate2: "20261225"
+        residence: ""
+        townCountry1: TEST
+        townCountry2: ???? ???????
+        streetName1: TEST
+        streetName2: ???? ???????
+        phoneNumber1: +971555259447
+        phoneNumber2: +971555259448
+        phoneNumber3: +971555259449
+        occupation1: OCC1
+        occupation2: OCC2
+        occupation3: OCC3
+        employersName1: TEST1
+        employersName2: TEST2
+        employersName3: TEST3
+        otherNationality1: JO
+        otherNationality2: US
+        workingCountry: JO
+        residentStatus: "YES"
+        politicallyExposedPerson: "N"
+        accountBeneficiary: John Smitt
+        beneficiaryName: John Smitt
+        workingCity: Baghdad
+        workingStreetName: ""
+        annualSalary: "12"
+        otherSourceOfIncome: Mum
+    UpdateCustomerKycInfoResponseBody:
+      required:
+      - transactionReferenceNumber
+      type: object
+      properties:
+        transactionReferenceNumber:
+          type: string
+      example:
+        transactionReferenceNumber: "202009"

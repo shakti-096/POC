@@ -1,0 +1,103 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "legalID1": {
+      "type": "string"
+    },
+    "legalIssueDate1": {
+      "type": "string"
+    },
+    "legalExpiryDate1": {
+      "type": "string"
+    },
+    "legalID2": {
+      "type": "string"
+    },
+    "legalIssueDate2": {
+      "type": "string"
+    },
+    "legalExpiryDate2": {
+      "type": "string"
+    },
+    "residence": {
+      "type": "string"
+    },
+    "townCountry1": {
+      "type": "string"
+    },
+    "townCountry2": {
+      "type": "string"
+    },
+    "streetName1": {
+      "type": "string"
+    },
+    "streetName2": {
+      "type": "string"
+    },
+    "phoneNumber1": {
+      "type": "string"
+    },
+    "phoneNumber2": {
+      "type": "string"
+    },
+    "phoneNumber3": {
+      "type": "string"
+    },
+    "occupation1": {
+      "type": "string"
+    },
+    "occupation2": {
+      "type": "string"
+    },
+    "occupation3": {
+      "type": "string"
+    },
+    "employersName1": {
+      "type": "string"
+    },
+    "employersName2": {
+      "type": "string"
+    },
+    "employersName3": {
+      "type": "string"
+    },
+    "otherNationality1": {
+      "type": "string"
+    },
+    "otherNationality2": {
+      "type": "string"
+    },
+    "workingCountry": {
+      "type": "string"
+    },
+    "residentStatus": {
+      "type": "string"
+    },
+    "politicallyExposedPerson": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ]
+    },
+    "workingCity": {
+      "type": "string"
+    },
+    "workingStreetName": {
+      "type": "string"
+    },
+    "annualSalary": {
+      "type": "string"
+    },
+    "otherSourceOfIncome": {
+      "type": "string"
+    },
+    "accountBeneficiary": {
+      "type": "string"
+    },
+    "beneficiaryName": {
+      "type": "string"
+    }
+  }
+}

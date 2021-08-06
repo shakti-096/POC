@@ -4,13 +4,9 @@
   "properties": {
     "message": {
       "type": "string"
-    },
-    "errorCode": {
-      "type": "string"
     }
   },
   "required": [
-    "message",
-    "errorCode"
+    "message"
   ]
 }
